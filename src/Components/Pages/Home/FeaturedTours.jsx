@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { useState } from "react";
 
 const tours = [
@@ -13,7 +12,7 @@ const FeaturedTours = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section id="featured-tours" className="py-12 bg-white">
+    <section id="featured-tours" className=" py-12 bg-white ">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-gray-800">Featured Tour Packages</h2>
         <p className="text-gray-600 mt-2">Find the best deals for your next journey</p>
@@ -24,7 +23,7 @@ const FeaturedTours = () => {
         {(showAll ? tours : tours.slice(0, 3)).map((tour, index) => (
           <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg border">
             {/* Tour Image */}
-            <img src={tour.image} alt={tour.title} className="w-full h-64 object-cover transition-transform group-hover:scale-105 duration-300" />
+            <img src={tour.image} alt={tour.title} className="w-full h-60 object-cover transition-transform group-hover:scale-105 duration-300" />
             
             {/* Discount Badge */}
             <div className="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm">
