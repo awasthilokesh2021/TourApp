@@ -33,7 +33,7 @@ const Booking = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/bookings/create",
+        "https://tour-backend-zsgx.onrender.com/api/bookings/create",
         {
           tourId: tour._id,
           date,

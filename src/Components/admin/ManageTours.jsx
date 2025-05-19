@@ -6,7 +6,7 @@ const ManageTours = () => {
 
   const fetchTours = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/tours");
+      const res = await axios.get("https://tour-backend-zsgx.onrender.com/api/tours");
       setTours(res.data);
     } catch (error) {
       console.error("Failed to fetch tours:", error);
@@ -22,7 +22,7 @@ const ManageTours = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/tours/delete-tour/${id}`, { withCredentials: true });
+      await axios.delete(`https://tour-backend-zsgx.onrender.com/api/tours/delete-tour/${id}`, { withCredentials: true });
       setTours(tours.filter((tour) => tour._id !== id));
     } catch (error) {
       console.error("Failed to delete:", error);

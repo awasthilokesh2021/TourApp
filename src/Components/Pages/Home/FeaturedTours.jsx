@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const tours = [
   { title: "Maldives Luxury Tour", price: "₹50,000", duration: "5 Days", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQICshL6DSdBqGeDNdaC_f7-auqcmG9HAfkJg&s", discount: "10%" },
@@ -10,9 +11,10 @@ const tours = [
 
 const FeaturedTours = () => {
   const [showAll, setShowAll] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <section id="featured-tours" className=" py-12 bg-white ">
+    <section id="featured-tours" className=" py-12 bg-white mb-2 ">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-gray-800">Featured Tour Packages</h2>
         <p className="text-gray-600 mt-2">Find the best deals for your next journey</p>
@@ -35,7 +37,9 @@ const FeaturedTours = () => {
               <h3 className="text-xl font-semibold">{tour.title}</h3>
               <p className="text-sm text-gray-600">{tour.duration}</p>
               <p className="text-lg font-bold mt-2">{tour.price}</p>
-              <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              <button 
+               onClick={() => navigate('/contact')}
+              className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                 Book Now
               </button>
             </div>
