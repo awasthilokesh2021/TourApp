@@ -83,8 +83,8 @@ const Booking = () => {
       },
       prefill: {
         name: "John Doe",
-        email: "qwe@qwe",
-        contact: "8442060200",
+        email: "test@example.com",
+        contact: "1234567890",
       },
       theme: {
         color: "#3399cc",
@@ -137,6 +137,7 @@ const Booking = () => {
 };
 
 export default Booking;
+
 
 
 
