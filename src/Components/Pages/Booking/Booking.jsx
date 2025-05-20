@@ -13,7 +13,9 @@ const Booking = () => {
   useEffect(() => {
     const fetchTour = async () => {
       try {
-        const res = await axios.get(`https://tour-backend-1-78hr.onrender.com/api/tours/${tourId}`);
+        const res = await axios.get(
+          `https://tour-backend-1-78hr.onrender.com/api/tours/${tourId}`
+        );
         setTour(res.data);
       } catch (err) {
         console.error("Error fetching tour data:", err);
@@ -30,7 +32,9 @@ const Booking = () => {
       return;
     }
 
-    const resKey = await axios.get("https://tour-backend-1-78hr.onrender.com/api/payment/get-key");
+    const resKey = await axios.get(
+      "https://tour-backend-1-78hr.onrender.com/api/payment/get-key"
+    );
     const razorpayKey = resKey.data.key;
 
     const { data } = await axios.post(
@@ -76,7 +80,9 @@ const Booking = () => {
           );
 
           alert("🎉 Payment Successful & Booking Confirmed!");
-          navigate("/payment-success");
+          setTimeout(() => {
+            navigate("/payment-success");
+          }, 100);
         } else {
           alert("❌ Payment verification failed");
         }
@@ -111,7 +117,9 @@ const Booking = () => {
       </div>
 
       <div>
-        <label className="block text-sm font-semibold">Number of Travelers</label>
+        <label className="block text-sm font-semibold">
+          Number of Travelers
+        </label>
         <input
           type="number"
           value={travelers}
@@ -137,7 +145,3 @@ const Booking = () => {
 };
 
 export default Booking;
-
-
-
-

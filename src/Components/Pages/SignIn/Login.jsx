@@ -23,7 +23,7 @@ const Login = () => {
       });
 
       dispatch(setUser(res.data.user ));
-      //console.log("Login Response:", res.data);
+        //console.log("Login Response:", res.data);
   
       if (res.data.user) {
        
