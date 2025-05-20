@@ -12,7 +12,7 @@ const TourDetails = () => {
   useEffect(() => {
     const fetchTour = async () => {
       try {
-        const res = await axios.get(`https://tour-backend-zsgx.onrender.com/api/tours/${id}`);
+        const res = await axios.get(`https://tour-backend-1-78hr.onrender.com/api/tours/${id}`);
         setTour(res.data);
       } catch (error) {
         console.error("Error fetching tour", error);

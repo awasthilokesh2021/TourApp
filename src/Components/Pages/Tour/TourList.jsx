@@ -8,7 +8,7 @@ const TourList = () => {
   const [tours, setTours] = useState([]);
 
   useEffect(() => {
-    axios.get("https://tour-backend-zsgx.onrender.com/api/tours") // Get all tours
+    axios.get("https://tour-backend-1-78hr.onrender.com/api/tours") // Get all tours
       .then(res => setTours(res.data))
       .catch(err => console.error("Error loading tours", err));
   }, []);

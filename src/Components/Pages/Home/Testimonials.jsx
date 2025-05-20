@@ -12,7 +12,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     const fetchReviews = async () => {
-      const res = await axios.get('http://localhost:5000/api/reviews/get');
+      const res = await axios.get('https://tour-backend-1-78hr.onrender.com/api/reviews/get');
       setReviews(res.data);
     };
     fetchReviews();
@@ -24,7 +24,7 @@ const Testimonials = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-     const res = await axios.post('https://tour-backend-zsgx.onrender.com/api/reviews/create', formData);
+     const res = await axios.post('https://tour-backend-1-78hr.onrender.com/api/reviews/create', formData);
     
     // Add new review to current state
      setReviews(prev => [...prev, res.data]);

@@ -21,7 +21,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://tour-backend-zsgx.onrender.com/api/auth/signup", formData, {
+      const res = await axios.post("https://tour-backend-1-78hr.onrender.com/api/auth/signup", formData, {
         withCredentials: true, 
       });
 
