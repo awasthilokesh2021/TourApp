@@ -79,10 +79,10 @@ const Booking = () => {
             { withCredentials: true }
           );
 
-          alert("🎉 Payment Successful & Booking Confirmed!");
           setTimeout(() => {
             navigate("/payment-success");
           }, 100);
+
         } else {
           alert("❌ Payment verification failed");
         }
@@ -99,6 +99,7 @@ const Booking = () => {
 
     const rzp = new window.Razorpay(options);
     rzp.open();
+  
   };
 
   if (!tour) return <p>Loading tour details...</p>;
