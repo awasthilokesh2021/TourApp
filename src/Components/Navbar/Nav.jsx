@@ -26,7 +26,7 @@ const Nav = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("https://tour-backend-zsgx.onrender.com/api/auth/logout", {
+      await axios.get("https://tour-backend-1-78hr.onrender.com/api/auth/logout", {
         withCredentials: true,
       });
       dispatch(clearUser());
