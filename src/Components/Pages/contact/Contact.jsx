@@ -20,7 +20,7 @@ const Contact = () => {
 
     try {
       const res = await axios.post(
-        "https://tour-backend-zsgx.onrender.com/api/contact/create-contact",
+        "https://tour-backend-1-78hr.onrender.com/api/contact/create-contact",
         formData
       );
 

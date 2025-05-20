@@ -17,7 +17,7 @@ const Booking = () => {
   useEffect(() => {
     const fetchTour = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/tours/${tourId}`);
+        const res = await axios.get(`https://tour-backend-1-78hr.onrender.com/api/tours/${tourId}`);
         setTour(res.data); // Set the fetched tour data
       } catch (err) {
         console.error("Error fetching tour data:", err);
@@ -33,7 +33,7 @@ const Booking = () => {
 
     try {
       const res = await axios.post(
-        "https://tour-backend-zsgx.onrender.com/api/bookings/create",
+        "https://tour-backend-1-78hr.onrender.com/api/bookings/create",
         {
           tourId: tour._id,
           date,
@@ -55,7 +55,7 @@ const Booking = () => {
   const handlePayment = async () => {
     const res = await loadRazorpay();
   
-    const resKey = await axios.get("http://localhost:5000/api/payment/get-key");
+    const resKey = await axios.get("https://tour-backend-1-78hr.onrender.com/api/payment/get-key");
     const razorpayKey = resKey.data.key;
   
     if (!res) {
@@ -64,7 +64,7 @@ const Booking = () => {
     }
   
     const { data } = await axios.post(
-      "http://localhost:5000/api/payment/create-order",
+      "https://tour-backend-1-78hr.onrender.com/api/payment/create-order",
       { amount: tour.price, tourId: tour._id },
       { withCredentials: true }
     );
@@ -80,7 +80,7 @@ const Booking = () => {
       handler: async function (response) {
     
         const verifyRes = await axios.post(
-          "http://localhost:5000/api/payment/verify",
+          "https://tour-backend-1-78hr.onrender.com/api/payment/verify",
           {
             response: {
               razorpay_order_id: response.razorpay_order_id,

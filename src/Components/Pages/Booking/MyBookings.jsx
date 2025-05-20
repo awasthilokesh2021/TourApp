@@ -16,7 +16,7 @@ const MyBookings = () => {
 
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("https://tour-backend-zsgx.onrender.com/api/bookings/my-bookings", {
+        const res = await axios.get("https://tour-backend-1-78hr.onrender.com/api/bookings/my-bookings", {
           withCredentials: true,
         });
         setBookings(res.data);
