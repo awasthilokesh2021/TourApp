@@ -30,8 +30,8 @@ const Testimonials = () => {
      setReviews(prev => [...prev, res.data]);
      setFormData({ name: '', rating: '', review: '' });
 
-    // console.log("Form data sent:", formData);
-     //console.log("Response from backend:", res.data);
+      console.log("Form data sent:", formData);
+      console.log("Response from backend:", res.data);
    
   };
 

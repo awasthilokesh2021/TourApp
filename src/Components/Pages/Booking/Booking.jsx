@@ -49,7 +49,7 @@ const Booking = () => {
       currency: "INR",
       name: "TravelApp",
       description: "Tour Booking Payment",
-      image: "/logo.png",
+      image: "https://png.pngtree.com/element_our/png/20181227/online-payment-icon-designed-creatively-and-simple-for-freshness-for-application-png_293646.jpg",
       order_id: data.order.id,
       handler: async function (response) {
         const verifyRes = await axios.post(

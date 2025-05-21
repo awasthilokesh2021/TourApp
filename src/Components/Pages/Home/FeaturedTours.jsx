@@ -7,6 +7,7 @@ const tours = [
   { title: "Dubai Adventure", price: "₹40,000", duration: "4 Days", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQICshL6DSdBqGeDNdaC_f7-auqcmG9HAfkJg&s", discount: "15%" },
   { title: "Switzerland Winter Trip", price: "₹70,000", duration: "7 Days", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQICshL6DSdBqGeDNdaC_f7-auqcmG9HAfkJg&s", discount: "5%" },
   { title: "Bali Beach Retreat", price: "₹35,000", duration: "6 Days", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQICshL6DSdBqGeDNdaC_f7-auqcmG9HAfkJg&s", discount: "12%" },
+  { title: "Paris Trip", price: "₹85,000", duration: "7 Days", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQICshL6DSdBqGeDNdaC_f7-auqcmG9HAfkJg&s", discount: "12%" }
 ];
 
 const FeaturedTours = () => {
