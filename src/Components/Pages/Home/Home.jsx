@@ -21,7 +21,11 @@ const Home = () => {
     <div>
       <HeroSection />
 
-      <Suspense fallback={<div className="mt-30 text-3xl">Loading...</div>}>
+      <Suspense fallback={
+    <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center bg-white z-50 text-3xl font-semibold">
+      Loading...
+    </div>
+  }>
         <motion.div
           initial="hidden"
           whileInView="show"
