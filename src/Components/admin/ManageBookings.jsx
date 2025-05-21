@@ -6,7 +6,7 @@ const ManageBookings = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("https://tour-backend-zsgx.onrender.com/api/bookings/bookings", { withCredentials: true });
+      const res = await axios.get("https://tour-backend-1-78hr.onrender.com/api/bookings/bookings", { withCredentials: true });
         console.log(res," all bookings");
       setBookings(res.data);
     } catch (err) {
@@ -19,7 +19,7 @@ const ManageBookings = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`https://tour-backend-zsgx.onrender.com/api/bookings/bookings/${id}`, { withCredentials: true });
+      await axios.delete(`https://tour-backend-1-78hr.onrender.com/api/bookings/bookings/${id}`, { withCredentials: true });
       setBookings(bookings.filter((b) => b._id !== id));
     } catch (err) {
       console.error("Failed to delete booking:", err);

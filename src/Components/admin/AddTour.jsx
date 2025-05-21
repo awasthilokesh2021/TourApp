@@ -21,7 +21,7 @@ const AddTour = () => {
   
     try {
       const res = await axios.post(
-        "https://tour-backend-zsgx.onrender.com/api/admin/add-tour",  // ✅ Your protected admin route
+        "https://tour-backend-1-78hr.onrender.com/api/admin/add-tour",  // ✅ Your protected admin route
         formData,
         {
           withCredentials: true, // ✅ Send cookie (token) with request

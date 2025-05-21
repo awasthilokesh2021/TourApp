@@ -22,7 +22,7 @@ const ManageTours = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://tour-backend-zsgx.onrender.com/api/tours/delete-tour/${id}`, { withCredentials: true });
+      await axios.delete(`https://tour-backend-1-78hr.onrender.com/api/tours/delete-tour/${id}`, { withCredentials: true });
       setTours(tours.filter((tour) => tour._id !== id));
     } catch (error) {
       console.error("Failed to delete:", error);
