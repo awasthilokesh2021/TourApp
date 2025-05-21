@@ -6,7 +6,7 @@ const ManageTours = () => {
 
   const fetchTours = async () => {
     try {
-      const res = await axios.get("https://tour-backend-zsgx.onrender.com/api/tours");
+      const res = await axios.get("https://tour-backend-1-78hr.onrender.com/api/tours");
       setTours(res.data);
     } catch (error) {
       console.error("Failed to fetch tours:", error);
